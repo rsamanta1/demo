@@ -1,13 +1,24 @@
 h1 {
     color: black;
-    text-align: left;
+    text-align: Center;
 }
 
 p {
-    color: darkred;
+    color: dimgrey;
+    text-align: center;
+}
+#new {
+    color: black;
+    text-align: center;
+}
+p3 {
+    color: red;
     text-align: left;
 }
-p2 {
-    color: darkred;
-    text-align: left;
-} 
+
+img {
+    opacity:0;
+}
+.text-center {
+    text-align: center;
+}

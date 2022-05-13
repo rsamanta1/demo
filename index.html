@@ -9,17 +9,20 @@
 </head>
 <body>
     <h1>Welcome to my website</h1>
-    <p>Hi World<br />Take a look at the table <b>below!</b></p>
+    <p>
+        Hi World<br />Take a look at the content <b>below!</b>
+    </p>
     <style>
         table, th, td {
-            border: 1px solid black
+            border: 1px solid black;
+            text-align: center;
         }
     </style>
     <table style="width: 25%">
         <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
+            <th>Soon</th>
+            <th>to be a</th>
+            <th>Nav bar</th>
         </tr>
         <tr>
             <td>1</td>
@@ -37,10 +40,24 @@
             <td>England</td>
         </tr>
     </table>
-    <br />
-    <button onclick= "addThis()">Click Me</button>
-    <p2 id="demo"></p2>
 
-    <script src="script.js"></script>
+    <p id="new">The demo here is a fade effect using these buttons. Select Fade In button to view <b>Lamborghini Aventador 3D Model</b> and then Fade Out to hide the image.</p>
+    <div class="text-center">
+        <button onclick="fadeIn()">Fade In</button>
+        <button onclick="fadeOut()">Fade Out</button>
+        <br />
+        <br />
+        <img id="img1" src="lamborghini.png" alt="Lambo" width="538" height="212">
+        <br />
+    </div>
+
+
+
+    <br />
+    <div class="text-center">
+        <button onclick="addThis()">Click Me</button> <br />
+        <p3 id="demo"></p3>
+    </div>
+        <script src="script.js"></script>
 </body>
 </html>
