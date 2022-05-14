@@ -8,56 +8,40 @@
     <title>HTML Demo Website</title>
 </head>
 <body>
-    <h1>Welcome to my website</h1>
-    <p>
-        Hi World<br />Take a look at the content <b>below!</b>
-    </p>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            text-align: center;
-        }
-    </style>
-    <table style="width: 25%">
-        <tr>
-            <th>Soon</th>
-            <th>to be a</th>
-            <th>Nav bar</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Alfred</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Maria</td>
-            <td>Mexico</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Albert</td>
-            <td>England</td>
-        </tr>
-    </table>
-
-    <p id="new">The demo here is a fade effect using these buttons. Select Fade In button to view <b>Lamborghini Aventador 3D Model</b> and then Fade Out to hide the image.</p>
-    <div class="text-center">
-        <button onclick="fadeIn()">Fade In</button>
-        <button onclick="fadeOut()">Fade Out</button>
-        <br />
-        <br />
-        <img id="img1" src="lamborghini.png" alt="Lambo" width="538" height="212">
-        <br />
+    <div class="header">
+        <h1>Welcome to my World</h1>
+        <p>Home Page<br />Take a look at the content <b>below!</b></p>
     </div>
 
+    <div id="navbar">
 
+            <ul class="topNav">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="#Car Visualizer">Car Visualizer</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#About">About</a></li>
+            </ul>
 
-    <br />
-    <div class="text-center">
-        <button onclick="addThis()">Click Me</button> <br />
-        <p3 id="demo"></p3>
     </div>
-        <script src="script.js"></script>
+
+    <div class="content" style="margin-left:15%; padding: 15px 15px; height: 550px;">
+
+
+        <p id="new">The demo here is a fade effect using these buttons. Select Fade In button to view <b>Lamborghini Aventador 3D Model</b> and then Fade Out to hide the image.</p>
+        <div class="text-center">
+            <button onclick="fadeIn()">Fade In</button>
+            <button onclick="fadeOut()">Fade Out</button>
+            <br />
+            <img id="img1" src="lamborghini.png" alt="Lambo" width="538" height="212">
+            <br />
+        </div>
+
+        <br />
+        <div class="text-center">
+            <button onclick="addThis()">Click Me</button> <br />
+            <p3 id="demo"></p3>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
