@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Demo Website</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to my World</h1>
+        <p>Box Page<br />Take a look at the content <b>below!</b></p>
+    </div>
+
+    <div id="navbar">
+
+        <ul class="topNav">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="carvisualizer.html">Box Visualizer</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#About">About</a></li>
+        </ul>
+
+    </div>
+    <script src="three/build/three.js"></script>
+
+    <script src="three/examples/js/controls/OrbitControls.js"></script>
+
+    <script type="module" style=canvas: width: 900px; height: 617px;>
+
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        const boxTexture = new THREE.TextureLoader().load('lamborghini.png');
+
+        const geometry = new THREE.BoxGeometry(20, 20, 20);
+        const material = new THREE.MeshBasicMaterial({ map: boxTexture });
+        //const material = new THREE.MeshBasicMaterial({ color: 0xFF2D00 });
+
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        //
+
+        camera.position.z = 50;
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+       // controls.enableZoom = false;
+
+        window.addEventListener('resize', onWindowResize);
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+        }
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+
+            render();
+
+        }
+
+        function render() {
+
+            renderer.render(scene, camera);
+
+        }
+
+        animate();
+    </script>
+</body>
+</html>
